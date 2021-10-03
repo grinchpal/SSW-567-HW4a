@@ -3,7 +3,8 @@ import json
 
 def my_function(uname):
     #uname = input("Enter your username: ")
-    url = f"https://api.github.com/users/{uname}/repos"
+    #url = f"https://api.github.com/users/{uname}/repos"
+    url = "https://api.github.com/users/" + uname + "/repos"
     user_data = requests.get(url).json()
     output = "user " + uname + " has the following repos:"
     if len(user_data) == 0:
