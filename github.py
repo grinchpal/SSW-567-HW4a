@@ -15,7 +15,7 @@ def my_function(uname):
         for repos in user_data:
             repoData = [repos['name'],0]
             #commitUrl = f"https://api.github.com/repos/{uname}/{repos['name']}/commits"
-            commitUrl = "https://api.github.com/repos/" + uname "/" + repos['name']+ "/commits"
+            commitUrl = "https://api.github.com/repos/" + uname + "/" + repos['name']+ "/commits"
             commit_data = requests.get(commitUrl).json()
             for commits in commit_data:
                 repoData[1] = repoData[1]+1
